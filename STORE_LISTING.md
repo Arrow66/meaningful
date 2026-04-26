@@ -50,4 +50,4 @@ Productivity
 
 ## Suggested Support Notes
 
-For support, include a project website, issue tracker, or support email before submitting to the Chrome Web Store.
+Todo
