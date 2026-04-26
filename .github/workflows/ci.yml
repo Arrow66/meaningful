@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Typecheck and package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Package Chrome extension
+        run: npm run package:chrome
+
+      - name: Upload Chrome package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: meaningful-chrome-mv3
+          path: .output/meaningful-chrome-mv3.zip
+          if-no-files-found: error

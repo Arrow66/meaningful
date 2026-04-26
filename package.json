@@ -1,0 +1,17 @@
+{
+  "name": "meaningful-word-extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs chrome",
+    "build:firefox": "node scripts/build.mjs firefox",
+    "package:chrome": "npm run build && node scripts/package-chrome.mjs",
+    "publish:chrome": "node scripts/publish-chrome.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0",
+    "typescript": "^6.0.3"
+  }
+}

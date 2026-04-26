@@ -1,0 +1,4 @@
+export const SELECTION_DEBOUNCE_MS = 80;
+export const SELECTION_CLEANUP_DEBOUNCE_MS = 40;
+export const MAX_SELECTION_CHARS = 3000;
+export const MAX_HIGHLIGHTED_WORDS = 80;
