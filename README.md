@@ -3,6 +3,9 @@
 Meaningful is a browser extension that shows definitions for selected words.
 Use the Meaningful toolbar button to pause the extension temporarily for the current website or turn it off for that website until you enable it again.
 
+<img width="909" height="520" alt="image" src="https://github.com/user-attachments/assets/5975cc31-e7f5-466e-a3d1-d9ac5994dcc2" />
+
+
 ## Development
 
 The TypeScript source lives in `src/`. Take a look in to package.json and tsconfig.json for more details.
